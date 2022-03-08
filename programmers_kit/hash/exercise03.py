@@ -1,5 +1,7 @@
 import itertools
 def solution(clothes):
+    #위장
+    
     answer = 0
     #처음에 딕셔너리를 만들어서 종류별로 뭐가있는지 확인해 보면 안되지.. 딕셔너리는 값이 한개니까
 
