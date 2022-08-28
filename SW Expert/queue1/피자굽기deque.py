@@ -22,7 +22,6 @@ for test_case in range(1, T + 1):
     while(len(que)>1):
         cur = que.popleft()
         cur[0] =  cur[0]//2
-        print(cur , que)
         if cur[0] == 0:
             if pizza_list:
                 que.append(pizza_list.pop())
