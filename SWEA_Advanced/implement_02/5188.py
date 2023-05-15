@@ -43,21 +43,24 @@ for test_case in range(1, T + 1):
     for i in range(n):
         map_list.append( tuple(map(int, input().split()))  )
 
-    #i_list = (i for i in range((n-1)*2) )
-    i_list = list()
-    for _ in range((n-1)*2):
-        i_list.append( (1,0))
-        i_list.append( (0,1))
-    i_list = tuple(i_list)
-    
-    for row in itertools.combinations(i_list, r = ):
+    i_list = (i for i in range((n-1)*2) )
+        
+    for row in itertools.combinations(i_list, r = n-1):
         x = 0
         y = 0
-        cur_sum = map_list[x][y]
-        for nx, ny in row:
-            x += nx
-            y += ny
-            cur_sum += map_list[x][y]
+        cur_sum = 0
+        row = set(row)
+        """
+        cur_sum += map_list[x][y]
+        point = 0
+        for i in range((n-1)*2):
+            if point < len(row) and i == row[point]:
+                #print(row, x, point)
+                x += 1
+                point += 1
+            else:
+                y += 1
+            cur_sum += map_list[x][y]"""
         res = min(cur_sum, res)
     
 
